@@ -1,0 +1,56 @@
+body {
+    background: url("https://stepik.org/media/attachments/lesson/374893/world.png") no-repeat;
+    background-size: 100%;
+    z-index: 0;
+}
+
+.Quiz-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    border: black;
+}
+
+.Cards {
+    margin: 1% 25%;
+    padding: 1%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: coral;
+    font-family: 'Righteous', cursive;
+    position: relative;
+
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 20px;
+    text-align: center;
+
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.Front, .Back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.Back {
+    transform: rotateY(180deg);
+}
